@@ -1,0 +1,60 @@
+$date
+	Mon Sep 08 17:14:22 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module a3_tb $end
+$var wire 1 ! sum $end
+$var wire 1 " diff $end
+$var wire 1 # carry $end
+$var wire 1 $ borrow $end
+$var reg 1 % A $end
+$var reg 1 & B $end
+$scope module G1 $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 # carry $end
+$var wire 1 ! sum $end
+$upscope $end
+$scope module G2 $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 $ borrow $end
+$var wire 1 " diff $end
+$var wire 1 ' na $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+1"
+1$
+1&
+#20
+0$
+0'
+0&
+1%
+#30
+0!
+1#
+0"
+1&
+#40
