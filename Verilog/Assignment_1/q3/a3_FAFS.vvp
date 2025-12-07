@@ -1,0 +1,169 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\system.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\va_math.vpi";
+S_000001e6083298d0 .scope module, "a3_FAFS_tb" "a3_FAFS_tb" 2 27;
+ .timescale 0 0;
+v000001e60838e2e0_0 .var "A", 0 0;
+v000001e60838eec0_0 .var "B", 0 0;
+v000001e60838e9c0_0 .var "C", 0 0;
+v000001e60838db60_0 .net "borrow", 0 0, L_000001e60838fa70;  1 drivers
+v000001e60838ef60_0 .net "carry", 0 0, L_000001e6083293b0;  1 drivers
+v000001e60838f460_0 .net "diff", 0 0, L_000001e608328e70;  1 drivers
+v000001e60838f320_0 .net "sum", 0 0, L_000001e608329260;  1 drivers
+S_000001e608335670 .scope module, "FA1" "myfulladder" 2 31, 2 13 0, S_000001e6083298d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "carry";
+L_000001e6083293b0 .functor OR 1, L_000001e608328ee0, L_000001e6083292d0, C4<0>, C4<0>;
+v000001e60838d190_0 .net "a", 0 0, v000001e60838e2e0_0;  1 drivers
+v000001e60838cb50_0 .net "b", 0 0, v000001e60838eec0_0;  1 drivers
+v000001e60838d230_0 .net "c", 0 0, v000001e60838e9c0_0;  1 drivers
+v000001e60838d410_0 .net "carry", 0 0, L_000001e6083293b0;  alias, 1 drivers
+v000001e60838d730_0 .net "sum", 0 0, L_000001e608329260;  alias, 1 drivers
+v000001e60838d7d0_0 .net "w1", 0 0, L_000001e608328ee0;  1 drivers
+v000001e60838d370_0 .net "w2", 0 0, L_000001e608329340;  1 drivers
+v000001e60838d2d0_0 .net "w3", 0 0, L_000001e6083292d0;  1 drivers
+S_000001e608335800 .scope module, "HA1" "myhalfadder" 2 15, 2 1 0, S_000001e608335670;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_000001e608329340 .functor XOR 1, v000001e60838e2e0_0, v000001e60838eec0_0, C4<0>, C4<0>;
+L_000001e608328ee0 .functor AND 1, v000001e60838e2e0_0, v000001e60838eec0_0, C4<1>, C4<1>;
+v000001e608303020_0 .net "a", 0 0, v000001e60838e2e0_0;  alias, 1 drivers
+v000001e608303240_0 .net "b", 0 0, v000001e60838eec0_0;  alias, 1 drivers
+v000001e608335990_0 .net "carry", 0 0, L_000001e608328ee0;  alias, 1 drivers
+v000001e608335a30_0 .net "sum", 0 0, L_000001e608329340;  alias, 1 drivers
+S_000001e608339fb0 .scope module, "HA2" "myhalfadder" 2 16, 2 1 0, S_000001e608335670;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_000001e608329260 .functor XOR 1, L_000001e608329340, v000001e60838e9c0_0, C4<0>, C4<0>;
+L_000001e6083292d0 .functor AND 1, L_000001e608329340, v000001e60838e9c0_0, C4<1>, C4<1>;
+v000001e60833a140_0 .net "a", 0 0, L_000001e608329340;  alias, 1 drivers
+v000001e60838d0f0_0 .net "b", 0 0, v000001e60838e9c0_0;  alias, 1 drivers
+v000001e60838d690_0 .net "carry", 0 0, L_000001e6083292d0;  alias, 1 drivers
+v000001e60838cbf0_0 .net "sum", 0 0, L_000001e608329260;  alias, 1 drivers
+S_000001e60833a1e0 .scope module, "FS2" "myfullsubtractor" 2 32, 2 20 0, S_000001e6083298d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow";
+L_000001e60838fa70 .functor OR 1, L_000001e608329030, L_000001e60838ffb0, C4<0>, C4<0>;
+v000001e60838cdd0_0 .net "a", 0 0, v000001e60838e2e0_0;  alias, 1 drivers
+v000001e60838ca10_0 .net "b", 0 0, v000001e60838eec0_0;  alias, 1 drivers
+v000001e60838cf10_0 .net "borrow", 0 0, L_000001e60838fa70;  alias, 1 drivers
+v000001e60838cfb0_0 .net "c", 0 0, v000001e60838e9c0_0;  alias, 1 drivers
+v000001e60838ed80_0 .net "diff", 0 0, L_000001e608328e70;  alias, 1 drivers
+v000001e60838f280_0 .net "w1", 0 0, L_000001e608329030;  1 drivers
+v000001e60838f0a0_0 .net "w2", 0 0, L_000001e608328d20;  1 drivers
+v000001e60838da20_0 .net "w3", 0 0, L_000001e60838ffb0;  1 drivers
+S_000001e6083029c0 .scope module, "HS1" "myhalfsubtractor" 2 22, 2 6 0, S_000001e60833a1e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_000001e608328fc0 .functor NOT 1, v000001e60838e2e0_0, C4<0>, C4<0>, C4<0>;
+L_000001e608328d20 .functor XOR 1, v000001e60838e2e0_0, v000001e60838eec0_0, C4<0>, C4<0>;
+L_000001e608329030 .functor AND 1, L_000001e608328fc0, v000001e60838eec0_0, C4<1>, C4<1>;
+v000001e60838d4b0_0 .net "a", 0 0, v000001e60838e2e0_0;  alias, 1 drivers
+v000001e60838d550_0 .net "b", 0 0, v000001e60838eec0_0;  alias, 1 drivers
+v000001e60838cab0_0 .net "borrow", 0 0, L_000001e608329030;  alias, 1 drivers
+v000001e60838d050_0 .net "diff", 0 0, L_000001e608328d20;  alias, 1 drivers
+v000001e60838d5f0_0 .net "na", 0 0, L_000001e608328fc0;  1 drivers
+S_000001e608302b50 .scope module, "HS2" "myhalfsubtractor" 2 23, 2 6 0, S_000001e60833a1e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_000001e608328e00 .functor NOT 1, L_000001e608328d20, C4<0>, C4<0>, C4<0>;
+L_000001e608328e70 .functor XOR 1, L_000001e608328d20, v000001e60838e9c0_0, C4<0>, C4<0>;
+L_000001e60838ffb0 .functor AND 1, L_000001e608328e00, v000001e60838e9c0_0, C4<1>, C4<1>;
+v000001e60838cc90_0 .net "a", 0 0, L_000001e608328d20;  alias, 1 drivers
+v000001e60838ce70_0 .net "b", 0 0, v000001e60838e9c0_0;  alias, 1 drivers
+v000001e60838c8d0_0 .net "borrow", 0 0, L_000001e60838ffb0;  alias, 1 drivers
+v000001e60838cd30_0 .net "diff", 0 0, L_000001e608328e70;  alias, 1 drivers
+v000001e60838c970_0 .net "na", 0 0, L_000001e608328e00;  1 drivers
+    .scope S_000001e6083298d0;
+T_0 ;
+    %vpi_call 2 35 "$dumpfile", "a3_FAFS_tb.vcd" {0 0 0};
+    %vpi_call 2 36 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001e6083298d0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e2e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838eec0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e60838e9c0_0, 0, 1;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "a3_FAFS.v";
