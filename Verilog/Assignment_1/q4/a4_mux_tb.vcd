@@ -1,0 +1,151 @@
+$date
+	Mon Sep 08 17:21:49 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module a4_mux_tb $end
+$var wire 1 ! Y $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ C $end
+$var reg 1 % D $end
+$var reg 1 & E $end
+$var reg 1 ' F $end
+$scope module G1 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 & s $end
+$var wire 1 ' t $end
+$var wire 1 ! y $end
+$var wire 1 ( w4 $end
+$var wire 1 ) w3 $end
+$scope module M1 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 * ns $end
+$var wire 1 ' s $end
+$var wire 1 + w1 $end
+$var wire 1 , w2 $end
+$var wire 1 ) y $end
+$upscope $end
+$scope module M2 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 - ns $end
+$var wire 1 ' s $end
+$var wire 1 . w1 $end
+$var wire 1 / w2 $end
+$var wire 1 ( y $end
+$upscope $end
+$scope module M3 $end
+$var wire 1 ) a $end
+$var wire 1 ( b $end
+$var wire 1 0 ns $end
+$var wire 1 & s $end
+$var wire 1 1 w1 $end
+$var wire 1 2 w2 $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+02
+01
+10
+0/
+0.
+1-
+0,
+0+
+1*
+0)
+0(
+0'
+0&
+1%
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+11
+1)
+1+
+0%
+1"
+#20
+0!
+01
+0)
+0+
+1#
+0"
+#30
+1!
+11
+1)
+0*
+1,
+0-
+0+
+1'
+1"
+#40
+0!
+1(
+01
+1.
+0)
+1*
+1-
+0,
+0'
+1$
+0#
+0"
+#50
+1!
+1)
+00
+12
+1+
+1&
+1%
+1"
+#60
+0!
+0)
+10
+02
+0+
+0&
+1#
+0"
+#70
+0.
+1!
+1)
+0*
+1,
+0-
+1/
+00
+12
+0+
+1'
+1&
+1"
+#80
