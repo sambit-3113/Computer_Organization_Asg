@@ -1,0 +1,202 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\system.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\va_math.vpi";
+S_00000255ff786110 .scope module, "a4_mux_tb" "a4_mux_tb" 2 16;
+ .timescale 0 0;
+v00000255ff7e00e0_0 .var "A", 0 0;
+v00000255ff7e04a0_0 .var "B", 0 0;
+v00000255ff7dffa0_0 .var "C", 0 0;
+v00000255ff7e1580_0 .var "D", 0 0;
+v00000255ff7e1260_0 .var "E", 0 0;
+v00000255ff7e11c0_0 .var "F", 0 0;
+v00000255ff7df960_0 .net "Y", 0 0, L_00000255ff777530;  1 drivers
+S_00000255ff7862a0 .scope module, "G1" "mymux4to1" 2 21, 2 9 0, S_00000255ff786110;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /INPUT 1 "d";
+    .port_info 4 /INPUT 1 "s";
+    .port_info 5 /INPUT 1 "t";
+    .port_info 6 /OUTPUT 1 "y";
+v00000255ff7debd0_0 .net "a", 0 0, v00000255ff7e00e0_0;  1 drivers
+v00000255ff7de9f0_0 .net "b", 0 0, v00000255ff7e04a0_0;  1 drivers
+v00000255ff7df5d0_0 .net "c", 0 0, v00000255ff7dffa0_0;  1 drivers
+v00000255ff7df7b0_0 .net "d", 0 0, v00000255ff7e1580_0;  1 drivers
+v00000255ff7deb30_0 .net "s", 0 0, v00000255ff7e1260_0;  1 drivers
+v00000255ff7dee50_0 .net "t", 0 0, v00000255ff7e11c0_0;  1 drivers
+v00000255ff7dec70_0 .net "w3", 0 0, L_00000255ff777ae0;  1 drivers
+v00000255ff7def90_0 .net "w4", 0 0, L_00000255ff777a70;  1 drivers
+v00000255ff7df030_0 .net "y", 0 0, L_00000255ff777530;  alias, 1 drivers
+S_00000255ff73e9a0 .scope module, "M1" "mymux2to1" 2 11, 2 1 0, S_00000255ff7862a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "y";
+L_00000255ff777450 .functor NOT 1, v00000255ff7e11c0_0, C4<0>, C4<0>, C4<0>;
+L_00000255ff777a00 .functor AND 1, v00000255ff7e00e0_0, L_00000255ff777450, C4<1>, C4<1>;
+L_00000255ff7776f0 .functor AND 1, v00000255ff7e04a0_0, v00000255ff7e11c0_0, C4<1>, C4<1>;
+L_00000255ff777ae0 .functor OR 1, L_00000255ff777a00, L_00000255ff7776f0, C4<0>, C4<0>;
+v00000255ff753020_0 .net "a", 0 0, v00000255ff7e00e0_0;  alias, 1 drivers
+v00000255ff752dc0_0 .net "b", 0 0, v00000255ff7e04a0_0;  alias, 1 drivers
+v00000255ff753240_0 .net "ns", 0 0, L_00000255ff777450;  1 drivers
+v00000255ff786430_0 .net "s", 0 0, v00000255ff7e11c0_0;  alias, 1 drivers
+v00000255ff7864d0_0 .net "w1", 0 0, L_00000255ff777a00;  1 drivers
+v00000255ff7df2b0_0 .net "w2", 0 0, L_00000255ff7776f0;  1 drivers
+v00000255ff7dea90_0 .net "y", 0 0, L_00000255ff777ae0;  alias, 1 drivers
+S_00000255ff73eb30 .scope module, "M2" "mymux2to1" 2 12, 2 1 0, S_00000255ff7862a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "y";
+L_00000255ff7777d0 .functor NOT 1, v00000255ff7e11c0_0, C4<0>, C4<0>, C4<0>;
+L_00000255ff777840 .functor AND 1, v00000255ff7dffa0_0, L_00000255ff7777d0, C4<1>, C4<1>;
+L_00000255ff777920 .functor AND 1, v00000255ff7e1580_0, v00000255ff7e11c0_0, C4<1>, C4<1>;
+L_00000255ff777a70 .functor OR 1, L_00000255ff777840, L_00000255ff777920, C4<0>, C4<0>;
+v00000255ff7df350_0 .net "a", 0 0, v00000255ff7dffa0_0;  alias, 1 drivers
+v00000255ff7deef0_0 .net "b", 0 0, v00000255ff7e1580_0;  alias, 1 drivers
+v00000255ff7df0d0_0 .net "ns", 0 0, L_00000255ff7777d0;  1 drivers
+v00000255ff7df170_0 .net "s", 0 0, v00000255ff7e11c0_0;  alias, 1 drivers
+v00000255ff7dedb0_0 .net "w1", 0 0, L_00000255ff777840;  1 drivers
+v00000255ff7de8b0_0 .net "w2", 0 0, L_00000255ff777920;  1 drivers
+v00000255ff7de950_0 .net "y", 0 0, L_00000255ff777a70;  alias, 1 drivers
+S_00000255ff784300 .scope module, "M3" "mymux2to1" 2 13, 2 1 0, S_00000255ff7862a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "y";
+L_00000255ff7774c0 .functor NOT 1, v00000255ff7e1260_0, C4<0>, C4<0>, C4<0>;
+L_00000255ff777990 .functor AND 1, L_00000255ff777ae0, L_00000255ff7774c0, C4<1>, C4<1>;
+L_00000255ff7778b0 .functor AND 1, L_00000255ff777a70, v00000255ff7e1260_0, C4<1>, C4<1>;
+L_00000255ff777530 .functor OR 1, L_00000255ff777990, L_00000255ff7778b0, C4<0>, C4<0>;
+v00000255ff7df3f0_0 .net "a", 0 0, L_00000255ff777ae0;  alias, 1 drivers
+v00000255ff7ded10_0 .net "b", 0 0, L_00000255ff777a70;  alias, 1 drivers
+v00000255ff7df670_0 .net "ns", 0 0, L_00000255ff7774c0;  1 drivers
+v00000255ff7df710_0 .net "s", 0 0, v00000255ff7e1260_0;  alias, 1 drivers
+v00000255ff7df490_0 .net "w1", 0 0, L_00000255ff777990;  1 drivers
+v00000255ff7df210_0 .net "w2", 0 0, L_00000255ff7778b0;  1 drivers
+v00000255ff7df530_0 .net "y", 0 0, L_00000255ff777530;  alias, 1 drivers
+    .scope S_00000255ff786110;
+T_0 ;
+    %vpi_call 2 25 "$dumpfile", "a4_mux_tb.vcd" {0 0 0};
+    %vpi_call 2 26 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000255ff786110 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e00e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e04a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7dffa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e1260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000255ff7e11c0_0, 0, 1;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "a4_mux.v";
