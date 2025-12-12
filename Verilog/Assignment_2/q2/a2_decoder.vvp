@@ -1,0 +1,75 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\system.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\Users\sambi\scoop\apps\iverilog\current\lib\ivl\va_math.vpi";
+S_000001844eb998b0 .scope module, "a2_decoder_tb" "a2_decoder_tb" 2 8;
+ .timescale 0 0;
+v000001844ebf1250_0 .var "A", 1 0;
+v000001844ebf0c10_0 .net "O", 3 0, L_000001844ebefc70;  1 drivers
+S_000001844eb5c5d0 .scope module, "D2" "decoder2to4" 2 12, 2 1 0, S_000001844eb998b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 4 "o";
+L_000001844eb99a40 .functor NOT 1, L_000001844ebf0670, C4<0>, C4<0>, C4<0>;
+L_000001844eb5bd20 .functor NOT 1, L_000001844ebf0850, C4<0>, C4<0>, C4<0>;
+L_000001844eb57e70 .functor AND 1, L_000001844eb99a40, L_000001844eb5bd20, C4<1>, C4<1>;
+L_000001844eb73120 .functor NOT 1, L_000001844ebefd10, C4<0>, C4<0>, C4<0>;
+L_000001844eb734f0 .functor AND 1, L_000001844eb73120, L_000001844ebf0a30, C4<1>, C4<1>;
+L_000001844ebf1ee0 .functor NOT 1, L_000001844ebf0990, C4<0>, C4<0>, C4<0>;
+L_000001844ebf1e00 .functor AND 1, L_000001844ebf1570, L_000001844ebf1ee0, C4<1>, C4<1>;
+L_000001844ebf1b60 .functor AND 1, L_000001844ebf0710, L_000001844ebf0490, C4<1>, C4<1>;
+v000001844eb96880_0 .net *"_ivl_10", 0 0, L_000001844eb57e70;  1 drivers
+v000001844eb96ba0_0 .net *"_ivl_15", 0 0, L_000001844ebefd10;  1 drivers
+v000001844eb964c0_0 .net *"_ivl_16", 0 0, L_000001844eb73120;  1 drivers
+v000001844eb96b00_0 .net *"_ivl_19", 0 0, L_000001844ebf0a30;  1 drivers
+v000001844eb96560_0 .net *"_ivl_20", 0 0, L_000001844eb734f0;  1 drivers
+v000001844eb96600_0 .net *"_ivl_25", 0 0, L_000001844ebf1570;  1 drivers
+v000001844eb96a60_0 .net *"_ivl_27", 0 0, L_000001844ebf0990;  1 drivers
+v000001844eb96920_0 .net *"_ivl_28", 0 0, L_000001844ebf1ee0;  1 drivers
+v000001844eb969c0_0 .net *"_ivl_3", 0 0, L_000001844ebf0670;  1 drivers
+v000001844ebf14d0_0 .net *"_ivl_30", 0 0, L_000001844ebf1e00;  1 drivers
+v000001844ebf0cb0_0 .net *"_ivl_36", 0 0, L_000001844ebf0710;  1 drivers
+v000001844ebefbd0_0 .net *"_ivl_38", 0 0, L_000001844ebf0490;  1 drivers
+v000001844ebefa90_0 .net *"_ivl_39", 0 0, L_000001844ebf1b60;  1 drivers
+v000001844ebf03f0_0 .net *"_ivl_4", 0 0, L_000001844eb99a40;  1 drivers
+v000001844ebf0350_0 .net *"_ivl_7", 0 0, L_000001844ebf0850;  1 drivers
+v000001844ebefb30_0 .net *"_ivl_8", 0 0, L_000001844eb5bd20;  1 drivers
+v000001844ebf00d0_0 .net "a", 1 0, v000001844ebf1250_0;  1 drivers
+v000001844ebf0b70_0 .net "o", 3 0, L_000001844ebefc70;  alias, 1 drivers
+L_000001844ebf0670 .part v000001844ebf1250_0, 1, 1;
+L_000001844ebf0850 .part v000001844ebf1250_0, 0, 1;
+L_000001844ebefd10 .part v000001844ebf1250_0, 1, 1;
+L_000001844ebf0a30 .part v000001844ebf1250_0, 0, 1;
+L_000001844ebf1570 .part v000001844ebf1250_0, 1, 1;
+L_000001844ebf0990 .part v000001844ebf1250_0, 0, 1;
+L_000001844ebefc70 .concat8 [ 1 1 1 1], L_000001844eb57e70, L_000001844eb734f0, L_000001844ebf1e00, L_000001844ebf1b60;
+L_000001844ebf0710 .part v000001844ebf1250_0, 1, 1;
+L_000001844ebf0490 .part v000001844ebf1250_0, 0, 1;
+    .scope S_000001844eb998b0;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "a2_decoder_tb.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001844eb998b0 {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v000001844ebf1250_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v000001844ebf1250_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v000001844ebf1250_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v000001844ebf1250_0, 0, 2;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "a2_decoder.v";
