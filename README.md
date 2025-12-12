@@ -5,4 +5,4 @@ Inside each assignment folder of Verilog there are question folders which contai
 
 Inside each assignment folder of Assembly there are question folders which contains ".s" file which is the source code. The questions and report are attached in each assignment folder.
 
-The questions are given by our professor Sukarn Agarwal of IISERB
+The questions are given by our professor Sukarn Agarwal of IISER Bhopal.
